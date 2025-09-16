@@ -1,0 +1,1 @@
+With the Simple Macro Stream Deck Plugin you can control Simple Voice Chat with your Stream Deck!
