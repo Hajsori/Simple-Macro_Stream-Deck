@@ -23,17 +23,21 @@
         const pattern = new RegExp(portField.getAttribute("pattern"));
         const { streamDeckClient } = SDPIComponents;
 
-        portField.addEventListener("input", function() {
-            if (portField.value === "" || pattern.test(portField.value)) {
-                portError.style.display = "none";
-            } else {
-                portError.style.display = "block";
-            }
+        streamDeckClient.getSettings().then(({ settings }) => {
+            portField.value = settings.port || "0";
+
+            portField.addEventListener("input", function() {
+                if (portField.value === "" || pattern.test(portField.value)) {
+                    portError.style.display = "none";
+                } else {
+                    portError.style.display = "block";
+                }
+
+                streamDeckClient.setSettings({ port: parseInt(portField.value) });
+            });
 
             streamDeckClient.setSettings({ port: parseInt(portField.value) });
-        });
-
-        streamDeckClient.setSettings({ port: parseInt(portField.value) });
+        })
     </script>
 </body>
 

@@ -1,197 +1,197 @@
 {
-    "Name": "Simple Macro",
-    "Version": "0.1.0.0",
-    "Author": "Hajsori",
-    "Actions": [
-        {
-            "Name": "Adjust Volumes",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.adjust-volumes",
-            "Icon": "imgs/actions/icons/adjust_volumes",
-            "Tooltip": "Adjust the volume of other players",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/adjust_volumes"
-                }
-            ]
-        },
-        {
-            "Name": "Toggle Voice Chat",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-voicechat",
-            "Icon": "imgs/actions/icons/speaker_off",
-            "Tooltip": "Enable or disable Simple Voice Chat",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "DisableAutomaticStates": true,
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/speaker"
-                },
-                {
-                    "Image": "imgs/actions/icons/speaker_off"
-                }
-            ]
-        },
-        {
-            "Name": "Group Management",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.group-management",
-            "Icon": "imgs/actions/icons/group",
-            "Tooltip": "Manage your voice chat groups",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/group"
-                }
-            ]
-        },
-        {
-            "Name": "Hide Voice Chat Icons",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-icons",
-            "Icon": "imgs/actions/icons/icons_off",
-            "Tooltip": "Manage your voice chat groups",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "DisableAutomaticStates": true,
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/icons_on"
-                },
-                {
-                    "Image": "imgs/actions/icons/icons_off"
-                }
-            ]
-        },
-        {
-            "Name": "Toggle Microphone",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-microphone",
-            "Icon": "imgs/actions/icons/microphone_off",
-            "Tooltip": "Mute or unmute yourself",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "DisableAutomaticStates": true,
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/microphone"
-                },
-                {
-                    "Image": "imgs/actions/icons/microphone_off"
-                }
-            ]
-        },
-        {
-            "Name": "Push to Talk",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.push-to-talk",
-            "Icon": "imgs/actions/icons/push_to_talk",
-            "Tooltip": "Only talk when you push the button",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/push_to_talk"
-                }
-            ]
-        },
-        {
-            "Name": "Toggle Recording",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-recording",
-            "Icon": "imgs/actions/icons/recording_on",
-            "Tooltip": "Enable or disable voice chat recording",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "DisableAutomaticStates": true,
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/recording_off"
-                },
-                {
-                    "Image": "imgs/actions/icons/recording_on"
-                }
-            ]
-        },
-        {
-            "Name": "Voice Chat Menu",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.voicechat-menu",
-            "Icon": "imgs/actions/icons/voicechat_menu",
-            "Tooltip": "Open the voice chat menu",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/voicechat_menu"
-                }
-            ]
-        },
-        {
-            "Name": "Voice Chat Settings",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.settings-menu",
-            "Icon": "imgs/actions/icons/settings",
-            "Tooltip": "Open the Voice Chat settings",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/settings"
-                }
-            ]
-        },
-        {
-            "Name": "Whisper",
-            "UUID": "xyz.hajsori.simplemacro.streamdeck.whisper",
-            "Icon": "imgs/actions/icons/whisper",
-            "Tooltip": "Whisper in game",
-            "PropertyInspectorPath": "ui/default_options.html",
-            "Controllers": [
-                "Keypad"
-            ],
-            "States": [
-                {
-                    "Image": "imgs/actions/icons/whisper"
-                }
-            ]
-        }
-    ],
-    "Category": "Simple Macro",
-    "CategoryIcon": "imgs/plugin/icon",
-    "CodePath": "bin/plugin.js",
-    "Description": "With the Simple Macro Stream Deck Plugin you can control Simple Voice Chat with your Stream Deck!",
-    "Icon": "imgs/plugin/icon",
-    "SDKVersion": 2,
-    "Software": {
-        "MinimumVersion": "7.0"
-    },
-    "OS": [
-        {
-            "Platform": "mac",
-            "MinimumVersion": "12"
-        },
-        {
-            "Platform": "windows",
-            "MinimumVersion": "10"
-        }
-    ],
-    "Nodejs": {
-        "Version": "20",
-        "Debug": "enabled"
-    },
-    "UUID": "xyz.hajsori.simplemacro.streamdeck"
+	"Name": "Simple Macro",
+	"Version": "1.0.0.0",
+	"Author": "Hajsori",
+	"Actions": [
+		{
+			"Name": "Adjust Volumes",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.adjust-volumes",
+			"Icon": "imgs/actions/icons_white/adjust_volumes",
+			"Tooltip": "Adjust the volume of other players",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/adjust_volumes"
+				}
+			]
+		},
+		{
+			"Name": "Toggle Voice Chat",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-voicechat",
+			"Icon": "imgs/actions/icons_white/speaker_off",
+			"Tooltip": "Enable or disable Simple Voice Chat",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"DisableAutomaticStates": true,
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/speaker"
+				},
+				{
+					"Image": "imgs/actions/icons/speaker_off"
+				}
+			]
+		},
+		{
+			"Name": "Group Management",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.group-management",
+			"Icon": "imgs/actions/icons_white/group",
+			"Tooltip": "Manage your voice chat groups",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/group"
+				}
+			]
+		},
+		{
+			"Name": "Hide Voice Chat Icons",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-icons",
+			"Icon": "imgs/actions/icons_white/icons_off",
+			"Tooltip": "Manage your voice chat groups",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"DisableAutomaticStates": true,
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/icons_on"
+				},
+				{
+					"Image": "imgs/actions/icons/icons_off"
+				}
+			]
+		},
+		{
+			"Name": "Toggle Microphone",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-microphone",
+			"Icon": "imgs/actions/icons_white/microphone_off",
+			"Tooltip": "Mute or unmute yourself",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"DisableAutomaticStates": true,
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/microphone"
+				},
+				{
+					"Image": "imgs/actions/icons/microphone_off"
+				}
+			]
+		},
+		{
+			"Name": "Push to Talk",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.push-to-talk",
+			"Icon": "imgs/actions/icons_white/push_to_talk",
+			"Tooltip": "Only talk when you push the button",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/push_to_talk"
+				}
+			]
+		},
+		{
+			"Name": "Toggle Recording",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-recording",
+			"Icon": "imgs/actions/icons_white/recording_on",
+			"Tooltip": "Enable or disable voice chat recording",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"DisableAutomaticStates": true,
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/recording_off"
+				},
+				{
+					"Image": "imgs/actions/icons/recording_on"
+				}
+			]
+		},
+		{
+			"Name": "Voice Chat Menu",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.voicechat-menu",
+			"Icon": "imgs/actions/icons_white/voicechat_menu",
+			"Tooltip": "Open the voice chat menu",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/voicechat_menu"
+				}
+			]
+		},
+		{
+			"Name": "Voice Chat Settings",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.settings-menu",
+			"Icon": "imgs/actions/icons_white/settings",
+			"Tooltip": "Open the Voice Chat settings",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/settings"
+				}
+			]
+		},
+		{
+			"Name": "Whisper",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.whisper",
+			"Icon": "imgs/actions/icons_white/whisper",
+			"Tooltip": "Whisper in game",
+			"PropertyInspectorPath": "ui/default_options.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/whisper"
+				}
+			]
+		}
+	],
+	"Category": "Simple Macro",
+	"CategoryIcon": "imgs/plugin/icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "With the Simple Macro Stream Deck Plugin you can control Simple Voice Chat with your Stream Deck!",
+	"Icon": "imgs/plugin/icon",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "7.0"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "xyz.hajsori.simplemacro.streamdeck"
 }
