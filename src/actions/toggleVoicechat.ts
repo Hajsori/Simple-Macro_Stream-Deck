@@ -1,6 +1,6 @@
-import { action, KeyDownEvent, SingletonAction } from "@elgato/streamdeck";
+import { action, KeyDownEvent, SingletonAction, WillAppearEvent } from "@elgato/streamdeck";
 import { WebSocket } from "ws";
-import {KeySettings, messages} from "../keySettings";
+import { getKeyData, KeySettings, messages } from "../keySettings";
 
 @action({ UUID: "xyz.hajsori.simplemacro.streamdeck.toggle-voicechat" })
 export class ToggleVoicechatAction extends SingletonAction<KeySettings> {
@@ -23,5 +23,9 @@ export class ToggleVoicechatAction extends SingletonAction<KeySettings> {
                 await event.action.showAlert();
             }
         }
+    }
+
+    override async onWillAppear(event: WillAppearEvent<KeySettings>): Promise<void> {
+        getKeyData((await event.action.getSettings()).port ?? 0, "isDisabled");
     }
 }

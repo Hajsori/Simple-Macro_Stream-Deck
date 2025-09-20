@@ -1,14 +1,11 @@
 import { action, KeyDownEvent, SingletonAction, WillAppearEvent } from "@elgato/streamdeck";
 import { WebSocket } from "ws";
-import {KeySettings, messages} from "../keySettings";
+import {getKeyData, KeySettings, messages} from "../keySettings";
 
 @action({ UUID: "xyz.hajsori.simplemacro.streamdeck.toggle-recording" })
 export class ToggleRecordingAction extends SingletonAction<KeySettings> {
     constructor(private readonly getWebSocket: (port: number | undefined) => WebSocket[]) {
         super();
-    }
-
-    override onWillAppear(ev: WillAppearEvent): void | Promise<void> {
     }
 
     override async onKeyDown(event: KeyDownEvent): Promise<void> {
@@ -26,5 +23,9 @@ export class ToggleRecordingAction extends SingletonAction<KeySettings> {
                 await event.action.showAlert();
             }
         }
+    }
+
+    override async onWillAppear(event: WillAppearEvent<KeySettings>): Promise<void> {
+        getKeyData((await event.action.getSettings()).port ?? 0, "isRecording");
     }
 }

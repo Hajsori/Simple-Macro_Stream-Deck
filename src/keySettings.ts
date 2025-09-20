@@ -1,3 +1,5 @@
+import {getWebSocket} from "./plugin";
+
 export type KeySettings = {
     port?: number;
 }
@@ -58,5 +60,32 @@ export const messages = {
             action: "deactivate",
             target: "whisper"
         })
+    }
+}
+
+let keys = new Map<number, Set<string>>();
+let sendOrdered = false;
+export function getKeyData(port: number, key: string) {
+    const set = keys.get(port) ?? new Set<string>();
+    set.add(key);
+    if (!keys.has(port)) {
+        keys.set(port, set);
+    }
+
+    if (!sendOrdered) {
+        sendOrdered = true;
+
+        setTimeout(() => {
+            for (const [p, ks] of keys.entries()) {
+                const sockets = getWebSocket(p);
+                if (!sockets) continue;
+                const payload = JSON.stringify({ action: "getData", targets: Array.from(ks) });
+                for (const ws of sockets) {
+                    ws.send(payload);
+                }
+            }
+
+            sendOrdered = false;
+        }, 10);
     }
 }

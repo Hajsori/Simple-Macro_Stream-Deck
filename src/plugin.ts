@@ -97,7 +97,7 @@ streamDeck.logger.info(`Received message: ${message}`);
 streamDeck.connect();
 
 
-function getWebSocket(port: number | undefined): WebSocket[] {
+export function getWebSocket(port: number | undefined): WebSocket[] {
     if (port == 0) {
         return Array.from(ports.values()).flat();
     } else if (typeof port === "number") {
