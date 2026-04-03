@@ -3,6 +3,11 @@ import {getWebSocket} from "./plugin";
 export type KeySettings = {
     port?: number;
 }
+export type GroupSettings = {
+    port?: number;
+    groupName: string;
+    groupPassword: string;
+}
 
 export const messages = {
     toggle: {
@@ -49,6 +54,12 @@ export const messages = {
         whisper: JSON.stringify({
             action: "activate",
             target: "whisper"
+        }),
+        joinGroup: JSON.stringify({
+            action: "activate",
+            target: "joinGroup",
+            group: "$group",
+            password: "$password"
         })
     },
     deactivate: {

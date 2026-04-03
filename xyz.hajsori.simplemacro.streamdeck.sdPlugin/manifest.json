@@ -53,6 +53,21 @@
 			]
 		},
 		{
+			"Name": "Join Group",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.join-group",
+			"Icon": "imgs/actions/icons_white/join-group",
+			"Tooltip": "Join a voice chat group instant",
+			"PropertyInspectorPath": "ui/group_options.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/join-group"
+				}
+			]
+		},
+		{
 			"Name": "Hide Voice Chat Icons",
 			"UUID": "xyz.hajsori.simplemacro.streamdeck.toggle-icons",
 			"Icon": "imgs/actions/icons_white/icons_off",

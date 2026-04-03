@@ -12,6 +12,7 @@ import { SettingsMenuAction } from "./actions/settingsMenu";
 import { VoicechatMenuAction } from "./actions/voicechatMenu";
 import { WhisperAction } from "./actions/whisper";
 import {KeySettings} from "./keySettings";
+import {JoinGroupAction} from "./actions/joinGroup";
 
 const ports = new Map<number, WebSocket[]>();
 
@@ -19,6 +20,7 @@ streamDeck.logger.setLevel(LogLevel.TRACE);
 
 streamDeck.actions.registerAction(new AdjustVolumesAction(getWebSocket));
 streamDeck.actions.registerAction(new GroupManagementAction(getWebSocket));
+streamDeck.actions.registerAction(new JoinGroupAction(getWebSocket));
 streamDeck.actions.registerAction(new PushToTalkAction(getWebSocket));
 streamDeck.actions.registerAction(new SettingsMenuAction(getWebSocket));
 streamDeck.actions.registerAction(new ToggleIconsAction(getWebSocket));
