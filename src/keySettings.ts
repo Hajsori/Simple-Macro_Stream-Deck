@@ -70,6 +70,10 @@ export const messages = {
         whisper: JSON.stringify({
             action: "deactivate",
             target: "whisper"
+        }),
+        leaveGroup: JSON.stringify({
+            action: "deactivate",
+            target: "leaveGroup"
         })
     }
 }
