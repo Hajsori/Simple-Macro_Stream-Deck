@@ -3,10 +3,12 @@ import {getWebSocket} from "./plugin";
 export type KeySettings = {
     port?: number;
 }
-export type GroupSettings = {
-    port?: number;
+export type GroupSettings = KeySettings & {
     groupName: string;
     groupPassword: string;
+}
+export type CreateGroupSettings = GroupSettings & {
+    groupType: string;
 }
 
 export const messages = {
@@ -60,6 +62,13 @@ export const messages = {
             target: "joinGroup",
             group: "$group",
             password: "$password"
+        }),
+        createGroup: JSON.stringify({
+            action: "activate",
+            target: "createGroup",
+            group: "$group",
+            password: "$password",
+            type: "$type"
         })
     },
     deactivate: {
