@@ -15,6 +15,7 @@ import { KeySettings } from "./keySettings";
 import { JoinGroupAction } from "./actions/joinGroup";
 import { LeaveGroupAction } from "./actions/leaveGroup";
 import {CreateGroupAction} from "./actions/createGroup";
+import {JoinOrCreateGroupAction} from "./actions/joinOrCreateGroup";
 
 const ports = new Map<number, WebSocket[]>();
 
@@ -23,6 +24,7 @@ streamDeck.logger.setLevel(LogLevel.TRACE);
 streamDeck.actions.registerAction(new AdjustVolumesAction(getWebSocket));
 streamDeck.actions.registerAction(new GroupManagementAction(getWebSocket));
 streamDeck.actions.registerAction(new JoinGroupAction(getWebSocket));
+streamDeck.actions.registerAction(new JoinOrCreateGroupAction(getWebSocket));
 streamDeck.actions.registerAction(new CreateGroupAction(getWebSocket));
 streamDeck.actions.registerAction(new LeaveGroupAction(getWebSocket));
 streamDeck.actions.registerAction(new PushToTalkAction(getWebSocket));

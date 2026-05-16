@@ -63,6 +63,13 @@ export const messages = {
             group: "$group",
             password: "$password"
         }),
+        joinOrCreateGroup: JSON.stringify({
+            action: "activate",
+            target: "joinOrCreateGroup",
+            group: "$group",
+            password: "$password",
+            type: "$type"
+        }),
         createGroup: JSON.stringify({
             action: "activate",
             target: "createGroup",

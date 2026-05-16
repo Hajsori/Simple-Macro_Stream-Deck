@@ -68,6 +68,21 @@
 			]
 		},
 		{
+			"Name": "Join or Create Group",
+			"UUID": "xyz.hajsori.simplemacro.streamdeck.join-or-create-group",
+			"Icon": "imgs/actions/icons_white/join_or_create_group",
+			"Tooltip": "Join a voice chat group instant",
+			"PropertyInspectorPath": "ui/create_group_options.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/icons/join_or_create_group"
+				}
+			]
+		},
+		{
 			"Name": "Create Group",
 			"UUID": "xyz.hajsori.simplemacro.streamdeck.create-group",
 			"Icon": "imgs/actions/icons_white/create_group",
