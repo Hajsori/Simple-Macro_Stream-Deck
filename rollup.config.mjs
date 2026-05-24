@@ -35,7 +35,7 @@ const config = {
 			exportConditions: ["node"],
 			preferBuiltins: true
 		}),
-		commonjs({ ignoreDynamicRequires: true }),
+		commonjs(),
 		!isWatching && terser(),
 		{
 			name: "emit-module-package-file",
@@ -43,8 +43,7 @@ const config = {
 				this.emitFile({ fileName: "package.json", source: `{ "type": "module" }`, type: "asset" });
 			}
 		}
-	],
-	external: ["ws"]
+	]
 };
 
 export default config;

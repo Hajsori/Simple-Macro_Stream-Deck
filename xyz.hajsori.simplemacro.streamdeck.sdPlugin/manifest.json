@@ -1,6 +1,6 @@
 {
 	"Name": "Simple Macro",
-	"Version": "1.1.0.1",
+	"Version": "1.0.0.1",
 	"Author": "Hajsori",
 	"Actions": [
 		{
@@ -235,7 +235,7 @@
 	"CodePath": "bin/plugin.js",
 	"Description": "With the Simple Macro Stream Deck Plugin you can control Simple Voice Chat with your Stream Deck!",
 	"Icon": "imgs/plugin/icon",
-	"SDKVersion": 3,
+	"SDKVersion": 2,
 	"Software": {
 		"MinimumVersion": "7.0"
 	},
