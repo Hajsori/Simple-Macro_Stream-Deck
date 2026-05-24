@@ -4,6 +4,7 @@ import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import path from "node:path";
 import url from "node:url";
+import copy from "rollup-plugin-copy";
 
 const isWatching = !!process.env.ROLLUP_WATCH;
 const sdPlugin = "xyz.hajsori.simplemacro.streamdeck.sdPlugin";
@@ -42,7 +43,18 @@ const config = {
 			generateBundle() {
 				this.emitFile({ fileName: "package.json", source: `{ "type": "module" }`, type: "asset" });
 			}
-		}
+		},
+		copy({
+			copyOnce: true,
+			errorOnExist: false,
+			overwrite: false,
+			targets: [
+				{
+					src: "node_modules/ws/",
+					dest: "xyz.hajsori.simplemacro.streamdeck.sdPlugin/bin/node_modules"
+				}
+			]
+		})
 	]
 };
 
