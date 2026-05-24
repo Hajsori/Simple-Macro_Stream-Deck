@@ -1,8 +1,10 @@
 {
     "scripts": {
         "build": "rollup -c",
-        "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart xyz.hajsori.simplemacro.streamdeck\""
+        "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart xyz.hajsori.simplemacro.streamdeck\"",
+        "postinstall": "pnpm --dir xyz.hajsori.simplemacro.streamdeck.sdPlugin install --frozen-lockfile"
     },
+    "packageManager": "pnpm@10.32.0",
     "type": "module",
     "devDependencies": {
         "@elgato/cli": "^1.5.0",
