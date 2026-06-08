@@ -1,4 +1,4 @@
-import streamDeck, { LogLevel } from "@elgato/streamdeck";
+import streamDeck from "@elgato/streamdeck";
 import { WebSocket } from "ws";
 
 import { ToggleMicrophoneAction } from "./actions/toggleMicrophone";
@@ -19,7 +19,7 @@ import {JoinOrCreateGroupAction} from "./actions/joinOrCreateGroup";
 
 const ports = new Map<number, WebSocket[]>();
 
-streamDeck.logger.setLevel(LogLevel.TRACE);
+streamDeck.logger.setLevel("trace");
 
 streamDeck.actions.registerAction(new AdjustVolumesAction(getWebSocket));
 streamDeck.actions.registerAction(new GroupManagementAction(getWebSocket));
